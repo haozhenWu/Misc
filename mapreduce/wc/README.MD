@@ -5,6 +5,9 @@ $ cd data; wget http://www.gutenberg.org/cache/epub/20417/pg20417.txt
 $ hdfs dfs -copyFromLocal ./data/pg20417.txt /hz_temp/input
 $ chmod +x mapper.py reducer.py run.sh
 $ ./run.sh
+$ hdfs dfs -ls /hz_temp/output/ # check output
+$ hdfs dfs -rm -R /hz_temp/output # remove output dir when finish
+
 ```
 
 
